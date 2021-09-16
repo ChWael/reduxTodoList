@@ -8,15 +8,15 @@ import Todo from "./Todo";
 
 export default function TodoList() {
   const dispatch = useDispatch()
-  const todo = useSelector(state => state.todo)
+  const todos = useSelector(state => state.todos)
   const filterTodo = useSelector(state =>state.filterTodo )
   const filter = useSelector(state => state.filter )
 
-useEffect(() =>{ dispatch(FilterHandler()) }, [filter.todo] )
+useEffect(() =>{ dispatch (FilterHandler ()) }, [filter,todos] )
 
   return (
     <div className="todoList-container">
-      {filterTodo.map((el) => (<Todo el={el} key={el.id}/>))}
+      {filterTodo.map((task) => (<Todo task={task} key={task.id}/>))}
       
     </div>
   );

@@ -12,7 +12,7 @@ dispatch(doneHandler(task.id))
 
   return (
     <div className="todo-container">
-    <h5    className={task.isDone&& 'done' }  > {task.text} </h5>
+    <h5 className={task.isDone&& 'done' }  > {task.text} </h5>
       <div className='btns' >
         <button  onClick={doneTodo}   >Done</button>
         <button onClick={()=> dispatch(deleteHandler(task.id))  }  >DLT</button>

@@ -10,7 +10,7 @@ const Filters = () =>{
 
     return(
         <div >
-            <select className='filter-btn' onChange={statusHandler} name='tasks' >
+            <select className='filter-btn' onChange={statusHandler}  >
                 <option value='All'>All</option>
                 <option value='Completed'>Completed</option>
                 <option value='Uncompleted'>Uncompleted</option>
